@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#2a1018" />
+<title>هدية لعائشه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* الألوان: بورجوندي غامق / عنابي / مشمشي / كريمي / وردي هادي */
+  :root {
+    --ink: #2a1018;
+    --dusk: #5b2a3d;
+    --apricot: #ff9d7a;
+    --cream: #fff1d6;
+    --rose: #f2b8c6;
+    --card: rgba(255,241,214,.06);
+    --line: rgba(255,241,214,.16);
+    --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .85 0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    background: radial-gradient(70% 45% at 90% 100%, rgba(255,157,122,.13), transparent 70%), radial-gradient(120% 90% at 50% 0%, var(--dusk) 0%, var(--ink) 65%);
+    background-attachment: fixed;
+    color: var(--cream);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before, .page::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .09; background-image: var(--grain); }
+  .rq { font-family: 'El Messiri', sans-serif; }
+  svg { display: block; fill: currentColor; }
+
+  /* الرئيسية */
+  .home { position: relative; z-index: 1; max-width: 560px; margin: 0 auto; padding: 72px 24px 64px; }
+  h1 { font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: clamp(34px, 9vw, 50px); line-height: 1.5; text-align: center; color: var(--cream); }
+  .subtitle { text-align: center; font-size: 16px; opacity: .8; margin: 6px 0 34px; line-height: 1.9; }
+
+  .menu { border-top: 1px solid var(--line); }
+  .choice {
+    width: 100%; display: flex; align-items: center; gap: 16px;
+    background: none; border: none; border-bottom: 1px solid var(--line);
+    padding: 20px 4px; cursor: pointer; text-align: right;
+    font-family: inherit; color: inherit; transition: background .2s;
+  }
+  .choice:hover { background: var(--card); }
+  .choice .hrt { width: 16px; height: 16px; color: var(--rose); flex: none; }
+  .choice .txt { flex: 1; }
+  .choice .title { font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.5; }
+  .choice .desc { font-size: 14px; opacity: .65; }
+  .choice .chev { font-size: 26px; opacity: .45; flex: none; }
+  .choice:focus-visible, .back:focus-visible, .cta:focus-visible, .friend:focus-visible, .back2:focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; }
+
+  /* صفحة المحتوى */
+  .page {
+    position: fixed; inset: 0; z-index: 5; overflow-y: auto; display: none;
+    background: radial-gradient(120% 90% at 50% 0%, var(--dusk) 0%, var(--ink) 75%);
+    animation: fadeIn .3s ease;
+  }
+  .page.open { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  .page-inner { max-width: 560px; margin: 0 auto; padding: 24px 24px 72px; }
+
+  .back {
+    position: sticky; top: 8px; z-index: 3;
+    background: rgba(42,16,24,.8); color: var(--cream);
+    border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px;
+    font-family: inherit; font-weight: 700; font-size: 14px; cursor: pointer;
+    margin-bottom: 18px; backdrop-filter: blur(6px);
+  }
+  .page h2 { font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: clamp(28px, 7vw, 38px); line-height: 1.5; margin: 4px 0 18px; }
+
+  .letter {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px 22px; line-height: 2.1; font-size: 18px; white-space: pre-line;
+  }
+
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+  @media (max-width: 420px) { .gallery { grid-template-columns: 1fr; } }
+  .photo, .slide {
+    position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 16px;
+    aspect-ratio: 3/4; background: linear-gradient(160deg, rgba(242,184,198,.18), rgba(255,157,122,.12));
+    display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
+    font-size: 14px;
+  }
+  .photo img, .photo video, .slide img, .slide video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ph { width: 44px; height: 44px; color: var(--rose); opacity: .7; }
+  .cap {
+    position: absolute; bottom: 0; inset-inline: 0; padding: 28px 14px 12px;
+    background: linear-gradient(transparent, rgba(42,16,24,.8)); font-size: 15px; font-weight: 500;
+  }
+
+  .list { display: flex; flex-direction: column; gap: 10px; }
+  .list li {
+    list-style: none; background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 15px 18px; font-size: 16px; line-height: 1.9;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .list li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rose); margin-top: 11px; flex: none; }
+
+  .cta {
+    display: block; width: 100%; margin-top: 18px; background: var(--apricot); color: var(--ink);
+    border: none; border-radius: 14px; padding: 15px; font-family: inherit; font-weight: 700; font-size: 18px;
+    cursor: pointer; text-decoration: none; text-align: center;
+  }
+  .cta:active { transform: scale(.98); }
+  .cta.wa { background: transparent; color: var(--cream); border: 1.5px solid var(--apricot); margin-top: 10px; }
+
+  /* رسائل صوتية */
+  .voices { display: flex; flex-direction: column; gap: 12px; }
+  .voice { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+  .vt { font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 22px; }
+  .vd { font-size: 14px; opacity: .7; margin: 0 0 10px; }
+  audio { width: 100%; }
+  .soon { font-size: 13px; opacity: .55; }
+
+  /* اديني سبب */
+  .reason-box {
+    min-height: 190px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line); border-radius: 18px; padding: 26px; background: var(--card);
+  }
+  .reason { font-weight: 600; font-family: 'El Messiri', sans-serif; font-size: 26px; line-height: 2; text-align: center; }
+  .reason.pop { animation: pop .4s ease; }
+  @keyframes pop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+
+  /* الصحاب */
+  .friends { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .friend {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 10px;
+    color: inherit; font-family: inherit; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .friend:active { transform: scale(.97); }
+  .av {
+    position: relative; width: 54px; height: 54px; border-radius: 50%; overflow: hidden; flex: none;
+    background: var(--rose); color: var(--ink); display: flex; align-items: center; justify-content: center;
+    font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 26px;
+  }
+  .av img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .fn { font-weight: 700; font-size: 16px; text-align: center; }
+  .fc { font-size: 12px; opacity: .6; margin-top: -4px; }
+  .back2 { background: none; border: none; color: var(--apricot); font-family: inherit; font-weight: 700; font-size: 15px; cursor: pointer; margin-bottom: 14px; }
+  .fmsg { margin-bottom: 14px; font-size: 16px; padding: 18px; }
+  .fvoice { margin-bottom: 14px; }
+
+  .carousel-wrap { position: relative; }
+  .carousel { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; gap: 12px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .carousel::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 100%; scroll-snap-align: center; scroll-snap-stop: always; }
+  .dots { display: flex; justify-content: center; gap: 7px; margin-top: 14px; }
+  .dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,241,214,.28); transition: all .2s; }
+  .dots i.on { background: var(--apricot); width: 22px; border-radius: 6px; }
+
+  .signature { margin-top: 28px; text-align: left; opacity: .65; font-size: 14px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page, .reason.pop { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="home">
+  <h1>كل سنة وإنتِ معانا يا شيشو</h1>
+  <p class="subtitle">اختاري أي باب… كل واحد فيهم فيه حاجة من قلبي</p>
+  <div class="menu" id="menu"></div>
+</main>
+
+<div class="page" id="page" role="dialog" aria-modal="true">
+  <div class="page-inner">
+    <button class="back" onclick="closePage()">رجوع ↩</button>
+    <h2 id="pgTitle"></h2>
+    <div id="pgBody"></div>
+    <p class="signature" id="pgSign"></p>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   ✏️  كل اللي تقدر تعدله بنفسك: النصوص والصور والصوت والرقم
+   ============================================================ */
+
+const SIGNATURE = "بكل حب، من أحدهم";   // ✏️ غيّر التوقيع
+const PHONE = "+201012712021";           // ✏️ رقمك
+
+const SECTIONS = [
+  {
+    title: "وقت ما تكوني زعلانة", desc: "اقرأي دي الأول",
+    body: { type: "letter", text:
+`لو إنتِ دلوقتي مش كويسة… بصي هنا.
+
+أول حاجة: إنتِ مش لوحدك. أنا هنا، دايمًا.
+
+مش لازم دلوقتي تفكري في حل، ولا تبرّري لحد إحساسك.
+زعلك مسموح بيه، وإحساسك حقيقي.
+
+افتكري بس إن الزعل ده عابر،
+وإن فيه حد بيدعيلك حتى وهو ساكت.
+
+ومش بحب أشوفك متضايقة، وعمري ما هبطل أحاول أفرّحك.` }
+  },
+  {
+    title: "رسائل بصوتي", desc: "اسمعيها وقت ما تحتاجي",
+    body: { type: "voices", items: [
+      // ✏️ سجّل الملفات وحطها في فولدر audio، وحط المسار في src زي "audio/sad.mp3"
+      { title: "لو زعلانة", src: "" },
+      { title: "لو مش قادرة تنامي", src: "" },
+      { title: "لو محتاجة تضحكي", src: "" },
+    ]}
+  },
+  {
+    title: "ذكرياتنا", desc: "لحظات مهما حصل",
+    body: { type: "gallery", photos: [
+      // ✏️ صورة: src:"images/1.jpg"  |  فيديو: video:"videos/1.mp4"
+      { src: "", video: "", caption: "أول لحظة" },
+      { src: "", video: "", caption: "ليلة ماتتنسيش" },
+      { src: "", video: "", caption: "ضحكة ما اتحسبتش" },
+      { src: "", video: "", caption: "سهرة عادية… استثنائية" },
+    ]}
+  },
+  {
+    title: "حاجات أنا نفسي فيها ليكي", desc: "أمنياتي ليكي",
+    body: { type: "list", items: [
+      { text: "تفضلي دايمًا مبسوطة بجد — مش عشان الدنيا، عشان إنتِ تستاهلي." },
+      { text: "كل حاجة تحلمي بيها تجيلك وإنتِ مستغربة." },
+      { text: "تفتكري في كل وقت صعب إنك أقوى مما تتخيلي." },
+      { text: "وإنتِ بتضحكي، الصوت بيوصل لينا كلنا." },
+    ]}
+  },
+  {
+    title: "اديني سبب", desc: "كل ضغطة سبب جديد",
+    body: { type: "reasons", reasons: [
+      // ✏️ عدّل أي جملة أو زوّد من عندك
+      "عشان وجودك بيخلي أي قعدة أحلى.",
+      "عشان لما بتضحكي الدنيا بتبقى أخف.",
+      "عشان طيبتك حقيقية ومش بتمثليها.",
+      "عشان بتسمعي لما حد يحكيلك من غير ما تحكمي عليه.",
+      "عشان إنتِ أقوى مما بتتخيلي، حتى لو مش حاسة.",
+      "عشان بتفتكري التفاصيل الصغيرة اللي محدش بياخد باله منها.",
+      "عشان حتى وإنتِ زعلانة بتفضلي محترمة وراقية.",
+      "عشان حتى سكاتك بيطمّن.",
+      "عشان بتحاولي دايمًا تكوني كويسة مع اللي حواليكي.",
+      "عشان الشلة من غيرك ماتبقاش نفس الشلة.",
+      "عشان تستاهلي كل حاجة حلوة بتحصلك.",
+      "عشان عندك طريقة تخلي أي حد يحس إنه مهم.",
+      "عشان بتتعبي وبتكملي، وده مش سهل.",
+      "عشان ضحكتك بتعدي لأي حد جنبك.",
+      "عشان قلبك أبيض ومبتشيليش في قلبك لحد.",
+      "عشان لما بتقولي «أنا جنبك» بتبقي فعلًا جنب الواحد.",
+      "عشان بتعرفي تفرّحي الناس بحاجات بسيطة.",
+      "عشان روحك خفيفة وبتخلي اليوم التقيل يعدي.",
+      "عشان صدقك مريح، مفيش معاكي لف ولا دوران.",
+      "عشان بتقدّري اللي بيحبوكي.",
+      "عشان عندك قلب كبير يساع الكل.",
+      "عشان مبتحبيش تجرحي حد حتى لو انجرحتي.",
+      "عشان بتسامحي وإنتِ قادرة متسامحيش.",
+      "عشان كلامك الحلو بيوصل في وقته.",
+      "عشان بتحسي بالواحد من غير ما يتكلم.",
+      "عشان إنتِ إنسانة يتعتمد عليها.",
+      "عشان شخصيتك مميزة ومش شبه حد.",
+      "عشان بتحاولي تتطوري وتبقي أحسن كل يوم.",
+      "عشان لما بتفرحي لحد، بتفرحي بجد.",
+      "عشان إنتِ الشخص اللي الواحد بيحب يحكيله.",
+      "عشان حتى في أصعب أيامك بتفتكري غيرك.",
+      "عشان ذوقك حلو في كل حاجة.",
+      "عشان بتعرفي تحوّلي اللحظة العادية لذكرى حلوة.",
+      "عشان عندك قدرة تقومي بعد كل وقعة.",
+      "عشان مجرد رسالة منك بتغيّر مزاج اليوم.",
+      "عشان ضحكتك من قلبك ومش مجاملة.",
+      "عشان بتخلي الكل يحس إنه مقبول زي ما هو.",
+      "عشان وفاءك للناس نادر.",
+      "عشان بتفرحي بنجاح غيرك زي نجاحك.",
+      "عشان بتفهمي الواحد بنظرة.",
+      "عشان مبتنسيش اللي وقف جنبك.",
+      "عشان لسانك حلو ومبتقوليش غير الكويس.",
+      "عشان بتصبّري غيرك وبتصبّري نفسك.",
+      "عشان وجودك أمان.",
+      "عشان بتحبي من غير شروط.",
+      "عشان أحلامك كبيرة وتستاهلي توصلي ليها.",
+      "عشان مجتهدة حتى لو محدش شايف.",
+      "عشان بتخلي الجو معاكي دافي.",
+      "عشان بتعرفي تقولي الكلمة اللي تفرق.",
+      "عشان بتشجعي اللي حواليكي يكملوا.",
+      "عشان بتشوفي الحلو في الناس.",
+      "عشان عندك حس فكاهة بيقلب القعدة.",
+      "عشان هزارك دايمًا بريء ولطيف.",
+      "عشان بتعرفي تسمعي وتفضلي هادية.",
+      "عشان مبتتغيريش مع الناس.",
+      "عشان ثباتك على مبادئك يستاهل الاحترام.",
+      "عشان بتقفي مع الصح حتى لو لوحدك.",
+      "عشان ذكاءك بيبان في أبسط تصرفاتك.",
+      "عشان أي مكان بتدخليه بيبقى أخف وأدفى.",
+      "عشان بتفتكري مواعيد الناس وأفراحهم.",
+      "عشان سلامك على الناس مختلف.",
+      "عشان بتعرفي تبتسمي حتى وإنتِ مرهقة.",
+      "عشان عمرك ما كنتي تقيلة على حد.",
+      "عشان بتحاولي تصلّحي بدل ما تبعدي.",
+      "عشان شخصيتك قوية من غير ما تقلّلي من حد.",
+      "عشان بتعملي أكتر مما بتقولي.",
+      "عشان حنيتك بتبان في التفاصيل الصغيرة.",
+      "عشان إنتِ من الناس اللي وجودهم نعمة.",
+      "عشان بتخلي الناس تحس بالراحة معاكي من أول مرة.",
+      "عشان مفيش حد بيقعد معاكي وبيمل.",
+      "عشان بتحبي الخير للكل.",
+      "عشان بتشاركي فرحتك وتحسّسي غيرك إنه جزء منها.",
+      "عشان بتفضلي إنتِ حتى لما الظروف تتغير.",
+      "عشان ردودك دايمًا مطمّنة.",
+      "عشان حضورك بيفرق حتى لو مقعدتيش كتير.",
+      "عشان بتتعلمي من أخطائك وبتكبري منها.",
+      "عشان بتتحملي أكتر من طاقتك علشان اللي بتحبيهم.",
+      "عشان إنتِ صاحبة بجد.",
+      "عشان قلبك بيصدّق الخير في الناس.",
+      "عشان حتى لما بتزعلي، زعلك راقي.",
+      "عشان مبسوطة بالبسيط وده كنز.",
+      "عشان بتعرفي تخلي أي لحظة صغيرة فرصة للضحك.",
+      "عشان كل ما بنشوفك بنفتكر إن الدنيا لسه فيها ناس حلوة.",
+      "عشان مبتستسلميش بسهولة.",
+      "عشان معاكي بنبقى على طبيعتنا.",
+      "عشان لسه جواكي طفلة بتفرح بأي حاجة.",
+      "عشان بتحترمي مشاعر الناس.",
+      "عشان عندك إصرار يخلي المستحيل ممكن.",
+      "عشان مهما مر وقت إنتِ زي ما إنتِ، جميلة من جوه.",
+      "عشان بتعرفي تقولي «أنا آسفة» لما تغلطي.",
+      "عشان بتحبي تشوفي اللي حواليكي كويسين.",
+      "عشان قلبك دايمًا مفتوح للي محتاج.",
+      "عشان بتدّي من غير ما تستني مقابل.",
+      "عشان كلمة منك بتطمّن.",
+      "عشان بتعرفي إمتى تسكتي وإمتى تتكلمي.",
+      "عشان الذكريات معاكي بتتحفر.",
+      "عشان وجودك في حياتنا نعمة نشكر ربنا عليها.",
+      "عشان تستاهلي يوم أحلى من ده كمان.",
+      "عشان كل سنة وإنتِ أجمل وأقوى وأقرب لحلمك.",
+      "عشان ببساطة… إنتِ عائشه.",
+    ]}
+  },
+  {
+    title: "أنا وصحابنا", desc: "فولدر لكل واحد فيهم",
+    body: { type: "friends", friends: [
+      // ✏️ key = اسم الملفات. الصور في فولدر images بالأسماء key1.jpg … key10.jpg (10 صور)
+      // والفيديوهات في فولدر videos بالأسماء key1.mp4 … key5.mp4 (5 فيديوهات). اللي مش موجود بيختفي لوحده.
+      // message = رسالة نصية منه — voice = مقطع صوتي مثلًا "audio/ahmed.mp3" (الاتنين اختياري)
+      { name: "Ahmed Ayman", key: "ahmed", message: "", voice: "" },
+      { name: "Eyad", key: "eyad", message: "", voice: "" },
+      { name: "Mohamed El Sayyad", key: "mohamed", message: "", voice: "" },
+      { name: "Ali Askar", key: "ali", message: "", voice: "" },
+      { name: "Zeina Hamdan", key: "zeina", message: "", voice: "" },
+      { name: "Rovan", key: "rovan", message: "", voice: "" },
+      { name: "Soaad", key: "soaad", message: "", voice: "" },
+      { name: "Youssef", key: "youssef", message: "", voice: "" },
+      { name: "Gamila", key: "gamila", message: "", voice: "" },
+      { name: "Logy", key: "logy", message: "", voice: "" },
+      { name: "Jana", key: "jana", message: "", voice: "" },
+      { name: "Hana", key: "hana", message: "", voice: "" },
+      { name: "Tant Eman", key: "eman", message: "", voice: "" },
+    ]}
+  },
+  {
+    title: "لو محتاجالي لأي حاجة", desc: "الباب ده مفتوح دايمًا",
+    body: { type: "cta", text: "اتصلي بيا دلوقتي", wa: "أو ابعتيلي واتساب", note:
+`مهما يكون الوقت، ومهما كان الموضوع صغير أو كبير.
+
+مفيش حاجة اسمها "مش هتزعجني".
+إنتِ عمرك ما زعجتيني — أبدًا.` }
+  },
+];
+
+/* ============ من هنا تحت: الكود — مفيش داعي تعدّل فيه ============ */
+
+const HEART = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let cur = 0, rq = [], lastR = -1;
+
+const menu = document.getElementById("menu");
+SECTIONS.forEach((s, i) => {
+  const el = document.createElement("button");
+  el.className = "choice";
+  el.innerHTML = `<span class="hrt">${HEART}</span>
+    <span class="txt"><div class="title">${esc(s.title)}</div><div class="desc">${esc(s.desc)}</div></span>
+    <span class="chev" aria-hidden="true">‹</span>`;
+  el.onclick = () => openPage(i);
+  menu.appendChild(el);
+});
+
+function mediaHTML(p, cls) {
+  const inner = p.video
+    ? `<video src="${esc(p.video)}" controls playsinline preload="metadata"></video>`
+    : p.src
+    ? `<img src="${esc(p.src)}" alt="${esc(p.caption || "")}" loading="lazy">`
+    : `<span class="ph">${HEART}</span>`;
+  const cap = p.caption ? `<div class="cap">${esc(p.caption)}</div>` : "";
+  return `<div class="${cls}">${inner}${cap}</div>`;
+}
+
+function openPage(i) {
+  const s = SECTIONS[i], b = s.body;
+  cur = i; rq = [];
+  document.getElementById("pgTitle").textContent = s.title;
+  document.getElementById("pgSign").textContent = b.type === "cta" ? "" : SIGNATURE;
+
+  let html = "";
+  if (b.type === "letter") {
+    html = `<div class="letter">${esc(b.text)}</div>`;
+  } else if (b.type === "list") {
+    html = `<ul class="list">` + b.items.map(x =>
+      `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.text)}</a>` : esc(x.text)}</li>`
+    ).join("") + `</ul>`;
+  } else if (b.type === "gallery") {
+    html = `<div class="gallery">` + b.photos.map(p => mediaHTML(p, "photo")).join("") + `</div>`;
+  } else if (b.type === "voices") {
+    html = `<div class="voices">` + b.items.map(v =>
+      `<div class="voice"><div class="vt">${esc(v.title)}</div>` +
+      (v.src ? `<audio controls preload="none" src="${esc(v.src)}"></audio>` : "") + `</div>`
+    ).join("") + `</div>`;
+  } else if (b.type === "reasons") {
+    html = `<div class="reason-box"><div class="reason" id="rs">دوسي على الزرار</div></div>
+            <button class="cta" onclick="nextReason()">اديني سبب</button>`;
+  } else if (b.type === "friends") {
+    html = `<div class="friends">` + b.friends.map((f, k) =>
+      `<button class="friend" onclick="showFriend(${k})"><span class="av">${esc([...f.name][0])}<img src="images/${esc(f.key)}1.jpg" alt="" onerror="this.remove()"></span>
+        <span class="fn">${esc(f.name)}</span></button>`
+    ).join("") + `</div>`;
+  } else if (b.type === "cta") {
+    html = `<div class="letter">${esc(b.note)}</div>
+            <a class="cta" href="tel:${esc(PHONE)}">${esc(b.text)}</a>
+            <a class="cta wa" href="https://wa.me/${esc(PHONE.replace(/\D/g, ""))}" target="_blank" rel="noopener">${esc(b.wa)}</a>`;
+  }
+
+  document.getElementById("pgBody").innerHTML = html;
+  const page = document.getElementById("page");
+  page.classList.add("open");
+  page.scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+
+function closePage() {
+  document.querySelectorAll("#pgBody audio, #pgBody video").forEach(m => m.pause());
+  document.getElementById("page").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function nextReason() {
+  const list = SECTIONS[cur].body.reasons;
+  if (!rq.length) {
+    rq = list.map((_, k) => k).sort(() => Math.random() - .5);
+    if (rq[rq.length - 1] === lastR && rq.length > 1) rq.unshift(rq.pop());
+  }
+  lastR = rq.pop();
+  const el = document.getElementById("rs");
+  el.textContent = list[lastR];
+  el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop");
+}
+
+const PHOTOS = 10, VIDEOS = 5;
+function friendSlides(f) {
+  let h = "";
+  for (let n = 1; n <= PHOTOS; n++) h += `<div class="slide"><img src="images/${esc(f.key)}${n}.jpg" alt="" onerror="dropSlide(this)"></div>`;
+  for (let n = 1; n <= VIDEOS; n++) h += `<div class="slide"><video src="videos/${esc(f.key)}${n}.mp4" controls playsinline preload="metadata" onerror="dropSlide(this)"></video></div>`;
+  return h;
+}
+function buildDots() {
+  const car = document.getElementById("car"), d = document.getElementById("dots");
+  if (!car || !d) return;
+  const n = Math.round(Math.abs(car.scrollLeft) / car.clientWidth);
+  d.innerHTML = [...car.children].map((_, j) => `<i class="${j === n ? "on" : ""}"></i>`).join("");
+}
+function dropSlide(el) {
+  const sl = el.closest(".slide");
+  if (sl) sl.remove();
+  const car = document.getElementById("car");
+  if (!car) return;
+  if (!car.children.length) car.innerHTML = `<div class="slide"><span class="ph">${HEART}</span></div>`;
+  buildDots();
+}
+
+function showFriend(k) {
+  const f = SECTIONS[cur].body.friends[k];
+  document.getElementById("pgTitle").textContent = f.name;
+  document.getElementById("pgBody").innerHTML =
+    `<button class="back2" onclick="openPage(${cur})">↩ كل الشلة</button>
+     ${f.message ? `<div class="letter fmsg">${esc(f.message)}</div>` : ""}
+     ${f.voice ? `<audio class="fvoice" controls preload="none" src="${esc(f.voice)}"></audio>` : ""}
+     <div class="carousel-wrap">
+       <div class="carousel" id="car">${friendSlides(f)}</div>
+     </div>
+     <div class="dots" id="dots"></div>`;
+  const car = document.getElementById("car");
+  buildDots();
+  car.addEventListener("scroll", () => {
+    const n = Math.round(Math.abs(car.scrollLeft) / car.clientWidth);
+    [...document.querySelectorAll("#dots i")].forEach((d, j) => d.classList.toggle("on", j === n));
+  }, { passive: true });
+  document.getElementById("page").scrollTop = 0;
+}
+
+document.addEventListener("keydown", e => { if (e.key === "Escape") closePage(); });
+</script>
+</body>
+</html>
